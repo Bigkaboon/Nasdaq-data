@@ -87,9 +87,9 @@ def run_program():
 
         for serie in series_ids:
             n += 1
-            print(f"{n} ID: {serie}        Description: {info[n-1]}")
+            print(f"{n} {info[n-1]}        ID: {serie}")
 
-        series_name = input("What Country Would You Like To See?\n").upper()
+        series_name = input("What Series You Like To See?\n").upper()
 
         series_code = series_name
 
