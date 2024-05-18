@@ -22,12 +22,15 @@ def get_country_code():
     for country in country_codes:
         print(f"{country.capitalize()}")
 
-    country_name = input("What Country Would You Like To See?\n").lower()
+    country_name = ""
 
-    if country_name in country_codes:
-        return country_codes[country_name]
-    else:
-        print("Country Code not Found")
+    while country_name not in country_codes:
+        country_name = input("What Country Would You Like To See?\n").lower()
+
+        if country_name in country_codes:
+            return country_codes[country_name]
+        else:
+            print("Country Code not Found")
 
 
 def get_series_id():
@@ -89,16 +92,18 @@ def run_program():
             n += 1
             print(f"{n} {info[n-1]}        ID: {serie}")
 
-        series_name = input("What Series Would You Like To See?\n").upper()
-        while False:
+        
+        series_name = ""
+
+        while series_name not in series_ids:
+            series_name = input("What Series Would You Like To See?\n").upper()
             if series_name in series_ids:
                 series_code = series_name
-                return True
             else:
                 print(f"{series_name} not available")
-                return False
 
-        print(f"KODEN R {series_code}")
+
+
         country_code = get_country_code()
         
 
