@@ -89,9 +89,14 @@ def run_program():
             n += 1
             print(f"{n} {info[n-1]}        ID: {serie}")
 
-        series_name = input("What Series You Like To See?\n").upper()
-
-        series_code = series_name
+        series_name = input("What Series Would You Like To See?\n").upper()
+        while False:
+            if series_name in series_ids:
+                series_code = series_name
+                return True
+            else:
+                print(f"{series_name} not available")
+                return False
 
         print(f"KODEN R {series_code}")
         country_code = get_country_code()
