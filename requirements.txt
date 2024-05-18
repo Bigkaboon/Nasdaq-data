@@ -1,0 +1,6 @@
+inflection==0.5.1
+Nasdaq-Data-Link==1.0.4
+numpy==1.26.4
+pandas==2.2.2
+pytz==2024.1
+tzdata==2024.1
